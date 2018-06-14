@@ -19,7 +19,6 @@ app.get("/house/:houseId/",(req,res) =>  {
   })
 });
 app.get(`/house/:houseId/reviews`,(req,res) =>  {
-  console.log(req.params, req.query);
   request(`http://localhost:3007/house/${req.params.houseId}/reviews?page=${req.query.page}`,function(err,response,body) {
     if (err) {
       res.sendStatus(500);
@@ -46,7 +45,17 @@ app.get('/user/:userId',(req,res) =>  {
       res.send(body);
     }
   })
-  });
+});
+
+app.get('/dates/:id', (req, res) => {
+  request(`http://localhost:3002/dates/${req.params.id}`,function(err,response,body) {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.send(body);
+    }
+  })
+})
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });
