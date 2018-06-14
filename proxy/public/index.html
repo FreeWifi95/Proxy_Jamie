@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css">
-    <title>FEC Demo</title>
+    <title>ShareBnB</title>
   </head>
   <body>
     <div id="app"></div>
@@ -11,6 +11,28 @@
     <div id="booking"></div>
     <div id="Reviews"></div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type=“text/css”>
+      body {
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+      }
+      @media screen and (min-width: 1124px) {
+        #booking {
+          position:sticky;
+          top:-60px;
+          float: right;
+        }
+        #app {
+          position:sticky;
+          top:100px;
+        }
+      }
+      @media screen and (min-width: 1124px) {
+        #booking {
+          position:sticky;
+          top:30px;
+        }
+      }
+    </style>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
    <!-- <script src="http://localhost:3001/app.js"></script>-->
@@ -18,7 +40,7 @@
     <script src="http://localhost:3002/:id/bookingBundle.js"></script>
     <script src="http://localhost:3007/reviewBundle.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
-    <script>
+  <!--   <script>
       ReactDOM.render(
         React.createElement(app),
         document.getElementById('app')
@@ -35,6 +57,6 @@
         React.createElement(Reviews),
         document.getElementById('Reviews')
       );
-    </script>
+    </script>-->
   </body>
 </html>
