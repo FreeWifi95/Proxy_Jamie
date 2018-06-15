@@ -7,6 +7,24 @@ const request = require('request');
 
 app.use(morgan('dev'));
 app.use('/:id', express.static(path.join(__dirname, 'public')));
+/*
+app.get("/photos/:id",(req,res) =>  {
+  request(`http://localhost:3003/photos/${req.params.id}`,function(err,response,body) {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      res.send(body);
+    }
+  })
+});
+*/
+app.get('/photos/:id', (req, res) => {
+  request(`http://localhost:3003/photos/${req.params.id}`, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      res.send(body);
+    }
+  });
+});
 
 app.get("/house/:houseId/",(req,res) =>  {
   request(`http://localhost:3007/house/${req.params.houseId}`,function(err,response,body) {
@@ -47,7 +65,6 @@ app.get('/user/:userId',(req,res) =>  {
 });
 
 app.get('/dates/:id', (req, res) => {
-  console.log('proxyxyxyxy')
   request(`http://localhost:3002/dates/${req.params.id}`,function(err,response,body) {
     if (err) {
       res.sendStatus(500);

@@ -2,61 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>ShareBnB</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/react-dates@16.7.0/lib/css/_datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" src="./booststrap.modal.css">
   </head>
   <body>
-    <div id="app"></div>
-    <div id="CountDown"></div>
+    <div id="photos"></div>
     <div id="booking"></div>
-    <div id="Reviews"></div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type=“text/css”>
-      body {
-        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-      }
-      @media screen and (min-width: 1124px) {
-        #booking {
-          position:sticky;
-          top:-60px;
-          float: right;
-        }
-        #app {
-          position:sticky;
-          top:100px;
-        }
-      }
-      @media screen and (min-width: 1124px) {
-        #booking {
-          position:sticky;
-          top:30px;
-        }
-      }
-    </style>
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
-   <!-- <script src="http://localhost:3001/app.js"></script>-->
-    <!--<script src="http://localhost:3002/app.js"></script>-->
+    <div id="app"></div>
+    <div id="booking"></div>
+   <!-- <img id="example" src="example.png">-->
+    <div id="app"></div>
+
+    <script src="http://localhost:3003/:id/photosbundle.js"></script>
     <script src="http://localhost:3002/:id/bookingBundle.js"></script>
     <script src="http://localhost:3007/reviewBundle.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
-  <!--   <script>
-      ReactDOM.render(
-        React.createElement(app),
-        document.getElementById('app')
-      );
-      ReactDOM.render(
-        React.createElement(booking),
-        document.getElementById('booking')
-      );
-      ReactDOM.render(
-        React.createElement(Related),
-        document.getElementById('Related')
-      );
-      ReactDOM.render(
-        React.createElement(Reviews),
-        document.getElementById('Reviews')
-      );
-    </script>-->
+
+
   </body>
 </html>
