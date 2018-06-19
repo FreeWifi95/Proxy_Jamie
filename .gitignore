@@ -24,3 +24,7 @@ coverage
 build/
 dist/
 
+bundle.js
+photosBundle.js
+reviewBundle.js
+bookingBundle.js

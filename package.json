@@ -1,0 +1,23 @@
+{
+  "name": "shareBnB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "react-dev": "webpack -d --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8"
+  }
+}
